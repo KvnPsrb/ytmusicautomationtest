@@ -23,10 +23,29 @@ Project ini merupakan rincian alur dalam melakukan proses pengujian otomatisasi 
    - Untuk penginstalan browser driver (di project ini saya menggunakan chrome)
      > npm install -g chromedriver
 
-3. 
+3. Setelah command diatas berhasil, maka langkah selanjutnya yaitu dengan membuka Selenium IDE yang sudah diinstal pada browser yang akan digunakan dalam pengujian website. Tampilannya akan menjadi seperti dibawah ini:
 
-4. Tambahkan Webdriver (disini saya menggunakan ChromeDriver dan bisa di download di "https://chromedriver.chromium.org/downloads") lalu buat Directory driver dan simpan ChromeDriver
-<img width="737" alt="Screen Shot 2021-10-23 at 14 50 28" src="https://user-images.githubusercontent.com/54229493/138548747-aa594413-2b0e-42a6-964c-306dfbcfa92e.png">
+img
+
+&ensp;&ensp;&ensp;&ensp;Jika sudah terbuka, maka pilih bagian ISI DISINI seperti dibawah ini:
+
+img
+
+4. Selanjutnya isi nama dari project yang ingin dibuat
+
+img
+
+5. Lalu, isi URL link yang ingin diuji
+
+img
+
+6. Maka, akan langsung diarahkan kepada website yang akan diuji bla bla bla bla
+
+
+
+
+
+
 
 5. Buat Directory "StepDef" dan "TestRunner" pada src/test/java dan juga buat Directory "Features" pada src/test/resources
 <img width="465" alt="Screen Shot 2021-10-23 at 14 46 51" src="https://user-images.githubusercontent.com/54229493/138548839-de7dba43-6ac9-4d63-b69f-e8d53337da3c.png">
