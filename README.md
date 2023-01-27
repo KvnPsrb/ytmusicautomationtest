@@ -24,57 +24,57 @@ Project ini merupakan rincian alur dalam melakukan proses pengujian otomatisasi 
    - Untuk penginstalan browser driver (di project ini saya menggunakan Chrome Browser)
      > npm install -g chromedriver
 
-3. Setelah command diatas berhasil, maka langkah selanjutnya yaitu dengan membuka Selenium IDE yang sudah diinstal pada browser yang akan digunakan dalam pengujian website. Jika sudah terbuka, maka pilih bagian ISI DISINI seperti dibawah ini:
+3. Setelah command diatas berhasil, maka langkah selanjutnya yaitu dengan membuka Selenium IDE yang sudah diinstal pada browser yang akan digunakan dalam pengujian website. Jika sudah terbuka, maka pilih bagian yang ditunjuk panah pada gambar dibawah ini (untuk membuat project baru):
 
-side_1
+&ensp;&ensp;&ensp;&ensp;![Side_1](https://raw.githubusercontent.com/KvnPsrb/ytmusicautomationtest/main/src/docs/side_1.PNG)
 
 4. Selanjutnya isi nama dari project yang ingin dibuat.
 
-side_2
+&ensp;&ensp;&ensp;&ensp;![Side_2](https://raw.githubusercontent.com/KvnPsrb/ytmusicautomationtest/main/src/docs/side_2.PNG)
 
-5. Lalu, isi URL link yang ingin diuji. Disini saya memilih URL music.youtube.com/explore karena pada halaman ini tampilan antarmukanya tidak akan berubah, sehingga memudahkan dalam proses pengujian.
+5. Lalu, isi URL link yang ingin diuji. Disini saya memilih URL music.youtube.com/explore karena pada halaman ini tampilan antarmukanya tidak berubah-ubah, sehingga memudahkan dalam proses pengujian. Setelah itu klik "Start Recording".
 
-side_3
+&ensp;&ensp;&ensp;&ensp;![Side_3](https://raw.githubusercontent.com/KvnPsrb/ytmusicautomationtest/main/src/docs/side_3.PNG)
 
-6. Maka, akan langsung diarahkan kepada website yang akan diuji seperti gambar dibawah ini.
+6. Maka akan langsung diarahkan kepada website yang akan diuji berdasarkan URL link yang sudah diisi sebelumnya seperti gambar dibawah ini.
 
-side_4
+&ensp;&ensp;&ensp;&ensp;![Side_4](https://raw.githubusercontent.com/KvnPsrb/ytmusicautomationtest/main/src/docs/side_4.PNG)
 
-   * Pada tahapan ini akan dilakukan perekaman mengenai fitur-fitur yang ada pada website YT Music sesuai dengan test case yang akan diimplementasikan. Dalam project ini saya memilih test case dalam memutar dan menjeda lagu yang dimainkan, karena menurut saya fitur ini merupakan yang terpenting dalam aplikasi streaming musik. Cara untuk mendapatkan data rekamannya yaitu dengan melakukan alur penggunaan fitur yang sebenarnya. Jika sudah selesai maka kembali kepada halaman aplikasi Selenium IDE dan hentikan rekaman.
+   * Seperti yang tertera pada gambar, pada bagian bawah kanan disampaikan bahwa Selenium IDE sedang melakukan perekaman, karena memang pada tahapan ini akan dilakukan perekaman mengenai fitur-fitur yang ada pada website YT Music sesuai dengan test case yang akan diimplementasikan. Dalam project ini saya memilih test case dalam memutar dan menjeda lagu yang dimainkan, karena menurut saya fitur ini merupakan yang terpenting dalam aplikasi streaming musik. Cara untuk mendapatkan data rekamannya yaitu dengan melakukan alur penggunaan fitur yang sebenarnya. Jika sudah selesai maka kembali kepada halaman aplikasi Selenium IDE dan hentikan rekaman.
 
 7. Jika rekaman telah dihentikan, maka akan muncul pop-up pemberian nama dari test nya. Saya menganjurkan untuk menamai test nya sesuai dengan apa yang diuji seperti gambar dibawah ini:
 
-side_5
+&ensp;&ensp;&ensp;&ensp;![Side_5](https://raw.githubusercontent.com/KvnPsrb/ytmusicautomationtest/main/src/docs/side_5.PNG)
 
 8. Jika sudah tersimpan, maka test nya akan menampilkan tahapan-tahapan yang sudah dilakukan pada proses rekaman sebelumnya. Setelah itu simpan project yang sudah dibuat dengan menekan tombol Save pada bagian atas kanan atau dengan menekan CTRL+S pada keyboard. Perlu diingat pada tempat project disimpan karena nantinya project akan dijalankan pada Anaconda Prompt.
 
-side_6
+&ensp;&ensp;&ensp;&ensp;![Side_6](https://raw.githubusercontent.com/KvnPsrb/ytmusicautomationtest/main/src/docs/side_6.PNG)
 
 9. Setelah project tersimpan, maka langkah selanjutnya yaitu dengan melakukan ekspor terhadap individu test yang sudah dibuat. Caranya dengan mengklik bagian kanan pada mouse di bagian nama test nya lalu pilih "Export", nanti akan muncul pop-up seperti gambar dibawah ini:
 
-side_7
+&ensp;&ensp;&ensp;&ensp;![Side_7](https://raw.githubusercontent.com/KvnPsrb/ytmusicautomationtest/main/src/docs/side_7.PNG)
 
    * Karena dalam project ini saya menggunakan Python, maka pilih Python pytest untuk jenis file yang akan terekspor disertai dengan mencentang bagian pertama dan kedua checkbox. Hal ini bertujuan untuk menyimpan variabel yang diperoleh saat melakukan proses perekaman kedalam script yang akan dibentuk. Perlu diingat pada tempat test ini disimpan karena nantinya test ini juga akan dijalankan pada Anaconda Prompt sehingga saya menyarankan untuk menyimpan test ini ditempat project tersimpan.
 
-10. Setelah tersimpan maka hasil ekspor dapat kita akses melalui IDE yang kita miliki (disini saya menggunakan PyCharm) untuk melihat script yang dibentuk berdasarkan proses perekaman yang sudah dilakukan. Untuk lihat lebih lanjut dapat diakses pada file [ini](isi link reponya)
+10. Setelah tersimpan maka hasil ekspor dapat kita akses melalui IDE yang kita miliki (disini saya menggunakan PyCharm) untuk melihat script yang dibentuk berdasarkan proses perekaman yang sudah dilakukan. Untuk lihat lebih lanjut dapat diakses pada file [ini](https://raw.githubusercontent.com/KvnPsrb/ytmusicautomationtest/main/src/test/test_playandpausebutton.py)
 
 11. Setelah semua file berhasil disimpan, maka langkah selanjutnya yaitu dengan membuka kembali Anaconda Prompt dan mengetik command seperti pada gambar dibawah ini:
 
-side_runner
+&ensp;&ensp;&ensp;&ensp;![Side_Runner](https://raw.githubusercontent.com/KvnPsrb/ytmusicautomationtest/main/src/docs/side_runner.PNG)
 
    * Command ini akan menjalankan pengujian otomatisasi dari project yang sudah dibuat berdasarkan rekaman yang telah dilakukan sebelumnya. Setelah dijalankan maka disaat proses berlangsung akan muncul pop-up browser yang berjalan secara otomatis berdasarkan rekaman yang sudah dibuat. Setelah proses selesai maka hasilnya akan seperti pada gambar dibawah ini:
 
-sr_result
+&ensp;&ensp;&ensp;&ensp;![Side_Runner_Result](https://raw.githubusercontent.com/KvnPsrb/ytmusicautomationtest/main/src/docs/sr_result.PNG)
 
    * Gambar tersebut memberikan laporan mengenai hasil proses pengujian otomatis dari website yang diuji apakah lolos atau gagal berdasarkan rekaman yang ada pada project tersebut.
 
 12. Setelah menjalankan pengujian berdasarkan project yang dibuat, maka akan dilakukan kembali pengujian berdasarkan individu test yang ada pada project tersebut yang sudah diekspor sebelumnya. Command dalam melakukan pengujiannya seperti gambar di bawah ini:
 
-pytest
+&ensp;&ensp;&ensp;&ensp;![Pytest](https://raw.githubusercontent.com/KvnPsrb/ytmusicautomationtest/main/src/docs/pytest.PNG)
 
    * Command ini akan menjalankan pengujian otomatisasi dari test yang sudah diekspor dari preject yang sudah dibuat berdasarkan rekaman yang telah dilakukan sebelumnya. Sama seperti sebelumnya, setelah dijalankan maka disaat proses berlangsung akan muncul pop-up browser yang berjalan secara otomatis berdasarkan rekaman yang sudah dibuat pada test tersebut. Setelah proses selesai maka hasilnya akan seperti pada gambar dibawah ini:
 
-pytest_result
+&ensp;&ensp;&ensp;&ensp;![Pytest_Result](https://raw.githubusercontent.com/KvnPsrb/ytmusicautomationtest/main/src/docs/pytest_result.PNG)
 
    * Gambar tersebut memberikan laporan mengenai hasil proses pengujian otomatis dari website yang diuji apakah lolos atau gagal berdasarkan rekaman yang ada pada test tersebut. 
 
