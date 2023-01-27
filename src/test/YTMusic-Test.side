@@ -1,0 +1,84 @@
+{
+  "id": "c3807987-7f73-4050-a9d4-5f61ae975a06",
+  "version": "2.0",
+  "name": "YTMusic-Test",
+  "url": "https://music.youtube.com/explore",
+  "tests": [{
+    "id": "d4b34e9a-81d7-4ce1-bc1f-4afd43b32eab",
+    "name": "Play and Pause Button",
+    "commands": [{
+      "id": "73426771-26ba-4b02-a6a2-3363b06f0e23",
+      "comment": "",
+      "command": "open",
+      "target": "https://music.youtube.com/explore",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7ddcad6-1e05-44d1-9525-0f4366443a77",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a65c635d-72a3-49b6-8da7-7d0870db462a",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,192.67747497558594)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee3d7c75-f546-4adf-a1a9-12adc5c4d801",
+      "comment": "",
+      "command": "click",
+      "target": "css=.style-scope:nth-child(1) > .left-items .icon",
+      "targets": [
+        ["css=.style-scope:nth-child(1) > .left-items .icon", "css:finder"],
+        ["xpath=(//ytmusic-play-button-renderer[@id='play-button']/div/yt-icon)[6]", "xpath:idRelative"],
+        ["xpath=//div/ytmusic-item-thumbnail-overlay-renderer/div/ytmusic-play-button-renderer/div/yt-icon", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cb58d6e-8cf2-4d80-a884-6f9a4c97eb65",
+      "comment": "",
+      "command": "click",
+      "target": "css=#play-pause-button > #icon",
+      "targets": [
+        ["css=#play-pause-button > #icon", "css:finder"],
+        ["xpath=(//tp-yt-iron-icon[@id='icon'])[178]", "xpath:attributes"],
+        ["xpath=//tp-yt-paper-icon-button[@id='play-pause-button']/tp-yt-iron-icon", "xpath:idRelative"],
+        ["xpath=//ytmusic-player-bar/div/div/tp-yt-paper-icon-button[3]/tp-yt-iron-icon", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63ec9784-3c86-4031-a5e3-f8c05d4054c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=#play-pause-button > #icon",
+      "targets": [
+        ["css=#play-pause-button > #icon", "css:finder"],
+        ["xpath=(//tp-yt-iron-icon[@id='icon'])[178]", "xpath:attributes"],
+        ["xpath=//tp-yt-paper-icon-button[@id='play-pause-button']/tp-yt-iron-icon", "xpath:idRelative"],
+        ["xpath=//ytmusic-player-bar/div/div/tp-yt-paper-icon-button[3]/tp-yt-iron-icon", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b71a75e3-79ce-48c0-bc7e-95a4cf74bec3",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d4b40809-a3f6-4c48-87d0-f884f8b8c0aa",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://music.youtube.com/", "https://music.youtube.com/explore"],
+  "plugins": []
+}
