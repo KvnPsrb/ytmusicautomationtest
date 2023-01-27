@@ -7,6 +7,7 @@ Project ini merupakan rincian alur dalam melakukan proses pengujian otomatisasi 
 - [PyCharm Community Version](https://www.jetbrains.com/pycharm/download/#section=windows)
 - [Selenium IDE](https://www.selenium.dev/selenium-ide/)
 - [Anaconda Distribution](https://www.anaconda.com/products/distribution)
+- [Chrome Browser](https://www.google.com/chrome/)
 
 **Berikut adalah langkah2 nya :**
 
@@ -20,141 +21,65 @@ Project ini merupakan rincian alur dalam melakukan proses pengujian otomatisasi 
    - Untuk penginstalan dependensi Selenium IDE
      > npm install -g selenium-side-runner
   
-   - Untuk penginstalan browser driver (di project ini saya menggunakan chrome)
+   - Untuk penginstalan browser driver (di project ini saya menggunakan Chrome Browser)
      > npm install -g chromedriver
 
-3. Setelah command diatas berhasil, maka langkah selanjutnya yaitu dengan membuka Selenium IDE yang sudah diinstal pada browser yang akan digunakan dalam pengujian website. Tampilannya akan menjadi seperti dibawah ini:
+3. Setelah command diatas berhasil, maka langkah selanjutnya yaitu dengan membuka Selenium IDE yang sudah diinstal pada browser yang akan digunakan dalam pengujian website. Jika sudah terbuka, maka pilih bagian ISI DISINI seperti dibawah ini:
 
-img
+side_1
 
-&ensp;&ensp;&ensp;&ensp;Jika sudah terbuka, maka pilih bagian ISI DISINI seperti dibawah ini:
+4. Selanjutnya isi nama dari project yang ingin dibuat.
 
-img
+side_2
 
-4. Selanjutnya isi nama dari project yang ingin dibuat
+5. Lalu, isi URL link yang ingin diuji. Disini saya memilih URL music.youtube.com/explore karena pada halaman ini tampilan antarmukanya tidak akan berubah, sehingga memudahkan dalam proses pengujian.
 
-img
+side_3
 
-5. Lalu, isi URL link yang ingin diuji
+6. Maka, akan langsung diarahkan kepada website yang akan diuji seperti gambar dibawah ini.
 
-img
+side_4
 
-6. Maka, akan langsung diarahkan kepada website yang akan diuji bla bla bla bla
+   * Pada tahapan ini akan dilakukan perekaman mengenai fitur-fitur yang ada pada website YT Music sesuai dengan test case yang akan diimplementasikan. Dalam project ini saya memilih test case dalam memutar dan menjeda lagu yang dimainkan, karena menurut saya fitur ini merupakan yang terpenting dalam aplikasi streaming musik. Cara untuk mendapatkan data rekamannya yaitu dengan melakukan alur penggunaan fitur yang sebenarnya. Jika sudah selesai maka kembali kepada halaman aplikasi Selenium IDE dan hentikan rekaman.
 
+7. Jika rekaman telah dihentikan, maka akan muncul pop-up pemberian nama dari test nya. Saya menganjurkan untuk menamai test nya sesuai dengan apa yang diuji seperti gambar dibawah ini:
 
+side_5
 
+8. Jika sudah tersimpan, maka test nya akan menampilkan tahapan-tahapan yang sudah dilakukan pada proses rekaman sebelumnya. Setelah itu simpan project yang sudah dibuat dengan menekan tombol Save pada bagian atas kanan atau dengan menekan CTRL+S pada keyboard. Perlu diingat pada tempat project disimpan karena nantinya project akan dijalankan pada Anaconda Prompt.
 
+side_6
 
+9. Setelah project tersimpan, maka langkah selanjutnya yaitu dengan melakukan ekspor terhadap individu test yang sudah dibuat. Caranya dengan mengklik bagian kanan pada mouse di bagian nama test nya lalu pilih "Export", nanti akan muncul pop-up seperti gambar dibawah ini:
 
+side_7
 
-5. Buat Directory "StepDef" dan "TestRunner" pada src/test/java dan juga buat Directory "Features" pada src/test/resources
-<img width="465" alt="Screen Shot 2021-10-23 at 14 46 51" src="https://user-images.githubusercontent.com/54229493/138548839-de7dba43-6ac9-4d63-b69f-e8d53337da3c.png">
+   * Karena dalam project ini saya menggunakan Python, maka pilih Python pytest untuk jenis file yang akan terekspor disertai dengan mencentang bagian pertama dan kedua checkbox. Hal ini bertujuan untuk menyimpan variabel yang diperoleh saat melakukan proses perekaman kedalam script yang akan dibentuk. Perlu diingat pada tempat test ini disimpan karena nantinya test ini juga akan dijalankan pada Anaconda Prompt sehingga saya menyarankan untuk menyimpan test ini ditempat project tersimpan.
 
-6. Buat Feature file "SearchGoogle.feature" pada directory Features
-```gherkin
-Feature: Search Google
-  Scenario: I want to using feature search on google
-    Given I Open browser
-    And Open website Google
-    And Located on google website
-    When I search "Wisnu Munawar"
-    Then Showing result related with "Wisnu Munawar"
-```
+10. Setelah tersimpan maka hasil ekspor dapat kita akses melalui IDE yang kita miliki (disini saya menggunakan PyCharm) untuk melihat script yang dibentuk berdasarkan proses perekaman yang sudah dilakukan. Untuk lihat lebih lanjut dapat diakses pada file [ini](isi link reponya)
 
-7. Hover ke Gherkin scenarionya dan akan muncul action dan klik "More Action" lalu klik lagi "Create all step definitions" lalu buat nama class nya sesuai dengan nama Feature file dan klik "OK"
-<img width="608" alt="Screen Shot 2021-10-23 at 14 52 34" src="https://user-images.githubusercontent.com/54229493/138549038-b2809d6e-aaec-4557-bede-11da51e7cb42.png">
-<img width="781" alt="Screen Shot 2021-10-23 at 14 52 57" src="https://user-images.githubusercontent.com/54229493/138549042-31420728-1b7a-4ddc-9d5f-f49ce38c3518.png">
-<img width="790" alt="Screen Shot 2021-10-23 at 14 53 28" src="https://user-images.githubusercontent.com/54229493/138549044-5d1b1526-2f61-49ab-b465-acd9395fe021.png">
+11. Setelah semua file berhasil disimpan, maka langkah selanjutnya yaitu dengan membuka kembali Anaconda Prompt dan mengetik command seperti pada gambar dibawah ini:
 
-8. Lalu akan otomatis ke generate scenarionya seperti dibawah ini
-<img width="706" alt="Screen Shot 2021-10-23 at 14 54 47" src="https://user-images.githubusercontent.com/54229493/138549076-93d6eba3-825a-43eb-a260-bc96c691398a.png">
+side_runner
 
-9. Isi scenario di java code nya seperti dibawah ini ya
-```java
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+   * Command ini akan menjalankan pengujian otomatisasi dari project yang sudah dibuat berdasarkan rekaman yang telah dilakukan sebelumnya. Setelah dijalankan maka disaat proses berlangsung akan muncul pop-up browser yang berjalan secara otomatis berdasarkan rekaman yang sudah dibuat. Setelah proses selesai maka hasilnya akan seperti pada gambar dibawah ini:
 
-public class SearchGoogle {
-    WebDriver driver;
-    @Given("I Open browser")
-    public void iOpenBrowser() {
-        final String dir = System.getProperty("user.dir");
-        System.out.println("current dir = " + dir);
-        System.setProperty("webdriver.chrome.driver", dir+"/driver/chromedriver");
-        driver = new ChromeDriver();
-    }
+sr_result
 
-    @And("Open website Google")
-    public void openWebsiteGoogle() throws InterruptedException {
-        driver.get("https://www.google.co.id/");
-        Thread.sleep(1000);
-    }
+   * Gambar tersebut memberikan laporan mengenai hasil proses pengujian otomatis dari website yang diuji apakah lolos atau gagal berdasarkan rekaman yang ada pada project tersebut.
 
-    @And("Located on google website")
-    public void locatedOnGoogleWebsite() {
-        driver.findElement(By.name("btnK")).isDisplayed();
-    }
+12. Setelah menjalankan pengujian berdasarkan project yang dibuat, maka akan dilakukan kembali pengujian berdasarkan individu test yang ada pada project tersebut yang sudah diekspor sebelumnya. Command dalam melakukan pengujiannya seperti gambar di bawah ini:
 
-    @When("I search {string}")
-    public void iSearch(String searchValue) {
-        driver.findElement(By.name("q")).sendKeys(searchValue);
-        driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
-    }
+pytest
 
-    @Then("Showing result related with {string}")
-    public void showingResultRelatedWith(String result) {
-        driver.findElement(By.xpath("//a[@href='https://id.linkedin.com/in/wisnuwm']")).isDisplayed();
-        String urlLinkedinWisnu = driver.findElement(By.xpath("//a[@href='https://id.linkedin.com/in/wisnuwm']")).getText();
-        System.out.println(urlLinkedinWisnu);
-        driver.close();
-        driver.quit();
-    }
-}
-```
-Dan untuk cara mencari Elementnya bagaimana?
-Klik kanan aja lalu klik inspect element dan arahkan pada elementnya, contoh seperti dibawah ini :
-<img width="1041" alt="Screen Shot 2021-10-23 at 15 00 10" src="https://user-images.githubusercontent.com/54229493/138549166-a63602d4-48c9-4172-bff3-a23e4d8ce2fb.png">
-<img width="1119" alt="Screen Shot 2021-10-23 at 15 01 17" src="https://user-images.githubusercontent.com/54229493/138549174-d26d3e70-bd36-4ac6-8730-41d097305999.png">
+   * Command ini akan menjalankan pengujian otomatisasi dari test yang sudah diekspor dari preject yang sudah dibuat berdasarkan rekaman yang telah dilakukan sebelumnya. Sama seperti sebelumnya, setelah dijalankan maka disaat proses berlangsung akan muncul pop-up browser yang berjalan secara otomatis berdasarkan rekaman yang sudah dibuat pada test tersebut. Setelah proses selesai maka hasilnya akan seperti pada gambar dibawah ini:
+
+pytest_result
+
+   * Gambar tersebut memberikan laporan mengenai hasil proses pengujian otomatis dari website yang diuji apakah lolos atau gagal berdasarkan rekaman yang ada pada test tersebut. 
+
+   * Melihat akan hasil yang diperoleh sekilas sama, namun yang membedakan adalah jika yang dijalankan adalah project dalam proses pengujian, maka seluruh test yang ada pada project tersebut akan dijalankan semua, sedangkan jika ingin menjalankan test secara individu maka lebih tepat menjalankan proses individu test nya seperti pada tahapan ke-12.
 
 
-10. Hover pada feature file dan klik Run
-<img width="642" alt="Screen Shot 2021-10-23 at 15 28 17" src="https://user-images.githubusercontent.com/54229493/138549132-9cd1b307-8f6f-4646-a017-deec5fb6bd3d.png">
+Sekian dari project yang sudah saya lakukan, kurang lebihnya mohon maaf, dan saya benar-benar mengharapkan adanya feedback yang dapat saya terima dari project saya ini karena saya menyadari masih ada yang dapat disempurnakan dari project ini. Terima kasih atas perhatiannya.
 
-11. Maka akan otomatis running test nya, seperti video dibawah ini :
-
-
-https://user-images.githubusercontent.com/54229493/138549271-4ad67366-9748-4df9-be78-0362eb72787d.mov
-
-12. Buat java class "TestRunner" pada Directory TestRunner
-<img width="1154" alt="Screen Shot 2021-10-23 at 15 34 24" src="https://user-images.githubusercontent.com/54229493/138549343-f278f808-c7ce-4ac1-bac0-df1325e5d9d6.png">
-
-13. Lalu copy code ini 
-```java
-@RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/resources/Features",
-        glue= {"StepDef"},
-        plugin ={"pretty","json:target/cucumber.json"})
-```
-<img width="1121" alt="Screen Shot 2021-10-23 at 15 35 10" src="https://user-images.githubusercontent.com/54229493/138549369-166b962a-9ab0-4069-bc9e-b901ff99c19e.png">
-
-14. Lalu open terminal pada IntelliJ dan ketikkan ```mvn test``` maka akan running test automation dan akan memunculkan result seperti ini
-<img width="797" alt="Screen Shot 2021-10-23 at 15 38 32" src="https://user-images.githubusercontent.com/54229493/138549452-0c01cb11-199f-4bef-b59e-2aacda9728b0.png">
-
-15. Lalu ketikkan ```mvn verify -DskipTests``` untuk generate report test yang sudah kita jalankan sebelumnya
-<img width="989" alt="Screen Shot 2021-10-23 at 15 40 34" src="https://user-images.githubusercontent.com/54229493/138549537-6e6056a4-d4c6-4d06-b660-9487cf30ef9e.png">
-
-16. Buka Directory target dan open file ini pada chrome
-<img width="371" alt="Screen Shot 2021-10-23 at 15 41 02" src="https://user-images.githubusercontent.com/54229493/138549577-b9e7e03a-f24d-4b84-b97d-20e29bcd644f.png">
-<img width="823" alt="Screen Shot 2021-10-23 at 15 41 34" src="https://user-images.githubusercontent.com/54229493/138549583-8b640d44-c4e3-45a1-940c-a9839bf103bf.png">
-
-17. Maka hasil dari generate test tersebut adalah seperti ini:
-<img width="1440" alt="Screen Shot 2021-10-23 at 15 41 42" src="https://user-images.githubusercontent.com/54229493/138549605-8ecefdd4-79be-41f9-99f3-efe991af5c8b.png">
-
-Selamat Mencoba :)
